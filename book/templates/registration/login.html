@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" >
+    {% csrf_token %}
+    {{ form.as_p }}
+  <button type="submit"> login </button>
+  <p>create account</p>
+  <a href="{% url 'signup' %}"> create a new account</a>
+</form>
+</body>
+</html>
